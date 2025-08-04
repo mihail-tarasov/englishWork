@@ -1,0 +1,15 @@
+package ru.mihail.tarasov.englishWork.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class blogController {
+    @GetMapping("/blog")       /*@GetMapping отслеживает url */
+        public String blogcontroller(Model model){
+            model.addAttribute("title","Блог");
+            return "blog";
+
+    }
+}
